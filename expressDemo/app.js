@@ -4,6 +4,9 @@ var app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
+var publicDir = require('path').join(__dirname,'/public');
+app.use(express.static(publicDir));
+
 // define routes here..
 app.get('/', function (req, res) {
     res.send('<html><body><h1>Hello World</h1></body></html>');
