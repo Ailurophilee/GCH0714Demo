@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/mystyle.css">
+    <script src="../js/login.js"></script>
     <title>Document</title>
     <script src="../js/login.js"></script>
 </head>
 <body>
     <img src="../images/a.jpg"/>
-    <form method="POST" action="/doLogin">
-        Name <input type="text" name="txtName" id="">
+    <form method="POST" action="/doLogin"  onsubmit="return check()">
+        Name <input type="text" name="txtName" class="redText" id="txtName">
         <br>
-        Password <input type="password" name="txtPassword" id="">
+        Password <input type="password" name="txtPassword" >
         <input type="submit" value="Login">
     </form>
 </body>
